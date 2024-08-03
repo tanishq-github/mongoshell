@@ -26,7 +26,7 @@ with open("movie.json") as outfile:
 #print('check',SEED_DATA[0])
 def main():
     #Establish DocumentDB connection
-    client = pymongo.MongoClient("mongodb://Tanishq:tanishq123@docdb-2024-08-03-05-45-20.cluster-couv5phowwot.us-east-2.docdb.amazonaws.com:27017/?tls=true&tlsCAFile=global-bundle.pem&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false")#(clusterendpoint, username=username, password=password, tls='true', tlsCAFile='rds-combined-ca-bundle.pem',retryWrites='false')
+    client = pymongo.MongoClient("mongodb://Tanishq:tanishq123@docdb-2024-08-03-05-45-20.cluster-couv5phowwot.us-east-2.docdb.amazonaws.com:27017/?tls=true&tlsCAFile=rds-combined-ca-bundle.pem&replicaSet=rs0&readPreference=secondaryPreferred&retryWrites=false")#(clusterendpoint, username=username, password=password, tls='true', tlsCAFile='rds-combined-ca-bundle.pem',retryWrites='false')
     #print(client.list_databases())
     try:
         dbt = client.get_database()
